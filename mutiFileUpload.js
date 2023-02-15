@@ -182,7 +182,12 @@ function addFileImage(srcImage, index = 0) {
   img.src = srcImage;
   div.append(button);
   div.append(img);
-  closeImageHandler(div, viewElement);
+  closeImageHandler(div, labelWrap);
   expandImage(div);
+
+  if (viewElement.children.length > 0) {
+    return;
+  }
+
   return viewElement.append(div);
 }
