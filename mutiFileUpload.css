@@ -1,0 +1,72 @@
+.upload_wrap {
+  width: 300px;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  margin: 20px;
+}
+.upload_wrap svg {
+  width: 36px;
+  height: auto;
+  pointer-events: none;
+}
+.upload_wrap img {
+  width: 100%;
+  height: auto;
+}
+.upload_wrap label {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+}
+.upload_wrap label > span {
+  pointer-events: none;
+}
+.upload_wrap label.on {
+  background: #eee;
+}
+.upload_wrap input {
+  display: none;
+}
+.upload_wrap .view_wrap {
+  position: relative;
+  display: none;
+  text-align: center;
+}
+.upload_wrap .view_wrap img {
+  width: 90%;
+}
+.upload_wrap .delete_file_btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f00;
+  position: absolute;
+  border-radius: 50%;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.upload_wrap .delete_file_btn::after,
+.upload_wrap .delete_file_btn::before {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.upload_wrap .delete_file_btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.upload_wrap .delete_file_btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/*# sourceMappingURL=mutiFileUpload.css.map */
